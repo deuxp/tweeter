@@ -26,36 +26,11 @@ body {
  */
 
 
-
- /* NAV BAR */
+main {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  /* border: 3px solid #333; */
+  margin: auto;
+}
  
-nav {
-  display: flex;
-  background: royalblue;
-  color: white;
-  border-radius: 5px;
-  border: rgb(88, 247, 88) solid;
-  justify-content: space-between;
-}
-
-
-#tweeter-logo {
-  font-family: 'Bungee';
-  border: rgb(226, 255, 97) solid;
-  padding-top: 25px;
-  padding-left: 20px;
-  padding-bottom: 5px;
-}
-
-#new-tweet {
-  display: flex;
-  flex-direction: column;
-  border: red solid;
-  align-items: center;
-  font-size: 12px;
-}
-
-/* b {
-  padding-left: 10px;
-  padding-right: 10px;
-} */

@@ -11,9 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="styles/header.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -26,14 +30,24 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <div id="tweeter-logo">tweeter</div>
+      <span id="tweeter-logo">tweeter</span>
       <div id="new-tweet">
-        <p><b>Write</b> a new tweet</p>
-        <p>@</p>
+        <p class="write"><b>Write</b> a new tweet</p>
+        <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
 
+
+    <header>
+      <div class="headshot">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <div class="profile-name">
+          <h2>Your Name</h2>
+          <!-- your name -->
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, autem? Ipsam iusto nesciunt voluptatum cum eveniet, consectetur ut porro dicta. Repellendus dolore eligendi corporis, ullam quo deserunt possimus fugit similique.</main>
   </body>
 </html>

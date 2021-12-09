@@ -1,0 +1,39 @@
+/* NAV BAR */
+ 
+nav {
+  display: flex;
+  background: #4056A1;
+  height: 120px;
+  color: white;
+  border-radius: 5px;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  position: relative;
+  /* left: 0px;
+  top: 0px; */
+  z-index: 1;
+}
+
+
+#tweeter-logo {
+  font-family: 'Bungee';
+  font-size: 2em;
+  padding-top: 25px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
+#new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 17px;
+}
+
+.fa-angle-double-down {
+  margin-bottom: 10px;
+  color: red;
+}
