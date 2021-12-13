@@ -5,6 +5,8 @@
 const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
+const morgan        = require('morgan');
+
 const app           = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,7 +22,7 @@ const db = require("./lib/in-memory-db");
 //
 // Because it exports a function that expects the `db` as a parameter, we can
 // require it and pass the `db` parameter immediately:
-const DataHelpers = require("./lib/data-helpers.js")(db);
+const DataHelpers = require("./lib/data-helpers.js")(db); // <-- [] this returns two methods that are extentions of the variable that it is bound to `Datahelpers`.. to save a tweet call Datahelpers.saveTweet
 
 // Update the dates for the initial tweets (data-files/initial-tweets.json).
 require("./lib/date-adjust")();
@@ -29,6 +31,7 @@ require("./lib/date-adjust")();
 // so it can define routes that use it to interact with the data layer.
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
+app.use(morgan('dev'));
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 
