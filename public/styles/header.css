@@ -1,41 +1,36 @@
 /* =-/=/-=-/=/-=-/=-/=/-=/-=-/=-/-=/=-//=-=-/*/
-/* =-/=/-= HEADER =/-=/-=-/=-/-=/=-//=-=-/*/
+/* =-/=/-= HEADER =/-=/-=-/=-/-=/=-//=-=-=-//*/
+/* border: rgb(15, 224, 119) solid; =/-=/-//=*/
 /* =-/=/-=-/=/-=-/=-/=/-=/-=-/=-/-=/=-//=-=-/*/
 
 header {
-  /* border: rgb(15, 224, 119) solid; */
   display: flex;
   flex-direction: column;
   height: 400px;
   width: 100%;
   background: rgb(219, 179, 127);
-  /* background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
-  /* background-image: url("https://www.transparenttextures.com/patterns/arches.png"); */
-  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
-  /* background-image: url("https://www.transparenttextures.com/patterns/connected.png"); */
-
+  background-image: url('../images/textures/arabesque.png');
 }
-
 
 .headshot {
-  /* border: rgb(100, 58, 255) solid; */
   display: flex;
   justify-content: center;
-  border: rgb(248, 76, 114) solid;
-  margin: auto;
-  width: auto;
-
-
-
-}
-
-.profile-name {
-  display: flex;
-  justify-content: center;
-  border: rgb(248, 76, 114) solid;
+  /* border: rgb(248, 76, 114) solid; */
   margin: auto;
   width: auto;
 }
+
+div.profile-name {
+  display: flex;
+  justify-content: center;
+  /* border: rgb(248, 76, 114) solid; */
+  margin: auto;
+  width: auto;
+}
+div.profile-name > h2 {
+  margin-top: 0;
+}
+
 .profile-name:hover {
   color: aqua;
 }
