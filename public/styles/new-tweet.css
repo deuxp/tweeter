@@ -1,0 +1,62 @@
+
+
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: center;
+}
+
+.new-tweet h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.typing-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: solid black;
+  font-size: 0.8em;
+  padding-bottom: 7px;
+
+}
+
+#tweet-text {
+  background: transparent;
+  border: transparent;
+  resize: none;
+  height: 1.3em;
+  width: 100%;
+}
+#tweet-text:focus-visible {
+  color: transparent;
+}
+
+.submission-area {
+  font-family: Bungee, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.3000000000000008em;
+
+}
+
+
+.submission-area > button {
+  background: #4056A1;
+  color: white;
+  border-radius: 5px;
+}
+
+.submission-area .counter {
+  color: #4056A1;
+}
