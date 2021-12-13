@@ -31,7 +31,6 @@ main {
   flex-direction: column;
   width: 90%;
   align-items: center;
-  /* border: 3px solid #333; */
   margin: auto;
 }
  
