@@ -5,7 +5,7 @@
 const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
-const morgan        = require('morgan')
+const morgan        = require('morgan');
 
 const app           = express();
 
