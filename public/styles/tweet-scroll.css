@@ -1,0 +1,61 @@
+#tweet {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  padding: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+}
+
+#tweet:hover {
+  box-shadow: 0px 5px 8px 0px rgb(50 50 50 / 75%);
+  background: rgb(235, 240, 244)
+}
+
+#tweet header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7em;
+}
+
+
+#tweet header .handle{
+  color: #a7a7a7;
+}
+
+#tweet header .profile {
+  display: flex;
+  width: 4em;
+  justify-content: space-between;
+}
+
+#tweet header .user {
+  color: #797979;
+}
+
+#tweet footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5em;
+  padding: 0.5em;
+}
+
+#tweet footer div.likes {
+  display: flex;
+  justify-content: space-around;
+  width: 5em;
+}
+
+#tweet div.message {
+  padding: 1em;
+  border-bottom: solid 2px;
+  padding-top: 1.5em;
+  font-size: .7em;
+}
+
+/* ------------- */
+/* hovers */
+
+.flag:hover, .retweet:hover, .like:hover {
+  color: goldenrod;
+}
