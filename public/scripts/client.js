@@ -4,31 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// hard coded test object 
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
 
 $(document).ready(() => {
 
@@ -40,6 +15,7 @@ $(document).ready(() => {
     const { user, content, created_at } = tweet;
     const { name, avatars, handle } = user;
     const { text } = content;
+    const ts = timeago.format(created_at)
     
     const $article = $(`
       <article id="tweet">
@@ -57,7 +33,7 @@ $(document).ready(() => {
 
         <footer>
 
-          <div class="time">${created_at}</div>
+          <div class="time">${ts}</div>
 
           <div class="likes">
             <div class="flag"><i class="fas fa-flag"></i></div>
@@ -81,17 +57,32 @@ $(document).ready(() => {
   }
 
 
-  // event listener for submit
+  // event listener for submit form
+
   $('.new-tweet form').submit(function(e) {
     e.preventDefault();
+    const text = $(this['0']).val();
     const $text = $(this['0']).serialize();
-    console.log($text);
-    $.post('/tweets', $text)
-     .then(res => {
-      //  console.log(res);
-      loadTweets()
-     })
-     this.reset();
+
+    // validation: empty string
+    if (!text) {
+      alert('start chirping!!')
+
+
+    } else if (text.length > 140) {
+
+      alert('Too much chirping > 140 characters!!')
+    
+      
+    } else {
+      $.post('/tweets', $text)
+      .then(_res => {
+        $('.container #tweet').remove() // reset html
+       loadTweets()
+      })
+      // clear form
+      this.reset();
+    }
   })
   
   const loadTweets = function() {
@@ -101,9 +92,12 @@ $(document).ready(() => {
       dataType: 'json',
       url: '/tweets',
       success: tweets => {
+        console.log(tweets);
         renderTweets(tweets)
       }
     })
   }
+
+  // init page
   loadTweets();
 })
