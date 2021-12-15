@@ -4,7 +4,8 @@
   border: solid;
   padding: 1em;
   margin-top: 1.5em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
+  width: 500px;
 }
 
 #tweet:hover {
@@ -25,8 +26,14 @@
 
 #tweet header .profile {
   display: flex;
-  width: 4em;
+  width: 6.5em;
   justify-content: space-between;
+  align-items: center;
+}
+
+#tweet header .profile .icon{
+  height: auto;
+  max-width: 45px;
 }
 
 #tweet header .user {

@@ -35,6 +35,8 @@ app.use(morgan('dev'));
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 
+console.log(db);
+
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
