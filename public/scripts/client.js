@@ -6,11 +6,14 @@
 
 
 $(document).ready(() => {
-  // input  -> JSON object tweet
-  // output -> HTML dom structure --> using $() and template literals for the tags || text --> appending to the article, which has CSS rules already applied
-  
-  const createTweetElement = (tweet) => { // use this in a loop
-    // raw text
+
+  /**
+   * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+   * @param {JSON} tweet -> the tweets JSON object database
+   * @returns the DOM object representation of one tweet
+   * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+   */
+  const createTweetElement = (tweet) => {
     const { user, content, created_at } = tweet;
     const { name, avatars, handle } = user;
     const { text } = content;
@@ -47,10 +50,17 @@ $(document).ready(() => {
         
       </article>
     `)
+    return $article;
+  };
   
-    return $article
-  }
-  
+
+  /**
+   * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+   * @param {JSON} tweets
+   * Behaviour: Leverage createTweetElement() to append
+   *            each tweet element to the DOM
+   * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+   */
   const renderTweets = (tweets) => {
     tweets.forEach(tweet => {
       const $tweet = createTweetElement(tweet);
@@ -60,65 +70,78 @@ $(document).ready(() => {
 
 
   /** Helper Function: error pop-up window
-   * ----- ----- ----- ----- ----- ----- ----- ----- 
-   * @param {string} msg ->  display error message
-   * @param {string} id ->  id=" ... " element id
+   * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+   * @param {string} msg -> display error message
+   * @param {string} id -> id="" element id
    * @param {string} sibling -> insert created DOM element after this sibling
    * Behaviour: The purpose of this function is to construct the 
-   * DOM element for the Error pop-up window. And insert itself next to a sibling
+   * DOM element for the Error pop-up window. And insert itself after a sibling
+   * ----- ----- ----- ----- ----- ----- ----- ----- ---------- ----- ----- 
    */
   const errorBubble = (msg, id, sibling) => {
     const $msg = $(`<div id="${id}">⚠️ - - ${msg} - - ⚠️</div>`)
 
     // create DOM element
     $msg.insertAfter(`${sibling}`)
-    // animate box
+    // animate pop-up
     $(`#${id}`).hide().slideDown({duration: 'fast'})
-    setTimeout(()=>{$(`#${id}`).hide('600')}, 3000)
-  };
+    // hide box pop-up upon form submission 
+    $('.new-tweet form').submit(function(e) {
+      e.preventDefault();
+      $(`#${id}`).hide('fast');
+    })
 
+  };
 
 
   // event listener for submit form
   $('.new-tweet form').submit(function(e) {
+
     e.preventDefault();
     const text = $(this['0']).val();
     const $text = $(this['0']).serialize();
     const errMsg1 = 'You need to enter some text'
     const errMsg2 = 'You have exceeded the character limit'
-
+    
     // validation: empty string
     if (!text) {
       errorBubble(errMsg1, 'error-msg', '.new-tweet h2')
-
+      
     } else if (text.length > 140) {
       errorBubble(errMsg2, 'error-msg', '.new-tweet h2')
 
     } else {
       $.post('/tweets', $text)
-      .then(_res => {
-        $('.container #tweet').remove() // reset html
-       loadTweets()
+      .then(() => {
+        $('.container #tweet').remove() // without this clearing the HTML, loadTweets() will append duplicate lists to the DOM
+        loadTweets()
       })
-      // clear form
-      this.reset();
+      .then(() => {
+        $('#error-msg').hide('slow')
+      })
+      .then(() => {
+        // clear form
+        $('.new-tweet form').trigger('reset');
+      })
     }
   })
   
 
-  // when called it grabs the tweet array from the database; type: JSON
-  const loadTweets = function() {
 
+  /**
+   * Behaviour: Requests the tweet array from the database; type: JSON
+   */
+  const loadTweets = function() {
     $.get({
       method: 'GET',
       dataType: 'json',
       url: '/tweets',
-      success: tweets => {
-        console.log(tweets);
-        renderTweets(tweets)
-      }
+      success: tweets => {renderTweets(tweets)}
     })
-  }
+    .catch(err => {
+      console.log(err.message);
+    })
+  };
 
   // init page
   loadTweets();
