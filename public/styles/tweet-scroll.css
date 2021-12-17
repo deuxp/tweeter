@@ -22,14 +22,17 @@
 
 #tweet header .handle{
   color: #a7a7a7;
+  display: flex;
+  align-items: center;
 }
 
 #tweet header .profile {
   display: flex;
-  width: 6.5em;
+  width: auto;
   justify-content: space-between;
   align-items: center;
 }
+
 
 #tweet header .profile .icon{
   height: auto;
@@ -38,6 +41,7 @@
 
 #tweet header .user {
   color: #797979;
+  margin-left: 5px;
 }
 
 #tweet footer {
