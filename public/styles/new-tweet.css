@@ -76,3 +76,7 @@
   background-color: rgb(201, 255, 213);
   color: red;
 }
+
+.hidden {
+  display: none;
+}

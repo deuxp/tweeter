@@ -158,8 +158,49 @@ $(document).ready(() => {
 
   loadTweets();
 
-  $('i').on('click', function() {
-    // this.css('color', 'blue')
-    console.log('i clicked it');
+
+  ///////////////////////////////////
+  // toggle new tweet from nav bar //
+  ///////////////////////////////////
+
+  const $ntwt = $('section.new-tweet');
+  const $i = $('i'); 
+  $i.on('click', () => {
+    $i.toggleClass('animate toggleColor')
+      $ntwt.slideToggle('fast')
+        $ntwt.toggleClass('hidden')
+          $('#tweet-text').focus()
+
   })
+
+
+  ////////////////////
+  // animate button //
+  ////////////////////
+
+  const $navTweet = $('.animate');
+
+  const loopBack = () => {
+    $navTweet.animate({
+      'top': '0px'
+    }, 1500, )
+  }
+	
+	const loop = () => {
+		$navTweet.animate({
+      'top': '10px'
+    }, 1300, () => {
+      loopBack()
+    })
+	}
+	
+  const animateButton = () => {
+    loop()
+    setInterval(() => {
+      loop()
+    }, 2800)
+
+  }
+  animateButton()
+
 })
