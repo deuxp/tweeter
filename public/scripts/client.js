@@ -68,8 +68,10 @@ $(document).ready(() => {
   
   
     /** 
+     * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
      * Behaviour: Requests the tweet array from the database; type: JSON
      *            Then renders the tweets to the DOM using renderTweets()
+     * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
      */
      const loadTweets = function() {
       $.get({
@@ -84,13 +86,13 @@ $(document).ready(() => {
     };
   
   
-    /** Helper Function: Appends error pop-up window nad presents it
+    /** Helper Function: Appends error pop-up window and presents it
      * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
      * @param {string} msg -> display error message
      * @param {string} id -> id="" element id
      * @param {string} sibling -> insert created DOM element after this sibling
      * Behaviour: The purpose of this function is to construct the 
-     * DOM element for the Error pop-up window. And insert itself after a sibling
+     * DOM element for the Error pop-up window. And insert itself after a specified sibling
      * ----- ----- ----- ----- ----- ----- ----- ----- ---------- ----- ----- 
      */
     const errorBubble = (msg, id, sibling) => {
@@ -155,4 +157,9 @@ $(document).ready(() => {
   ////////////////////////////////
 
   loadTweets();
+
+  $('i').on('click', function() {
+    // this.css('color', 'blue')
+    console.log('i clicked it');
+  })
 })

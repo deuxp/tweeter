@@ -19,15 +19,4 @@ $(document).ready(() => {
     
   });
   
-  
-      ///////////////////
-      // reset counter //
-      ///////////////////
-  $('.new-tweet form').submit(function(e) {
-      e.preventDefault();
-      let $counts = $(this).parents('form').children('.submission-area').children('.counter');
-
-      $counts.html('140')
-  })
-
 });
