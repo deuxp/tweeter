@@ -5,7 +5,7 @@
   padding: 1em;
   margin-top: 1.5em;
   margin-bottom: 1em;
-  width: 95%;
+  width: 85%;
 }
 
 #tweet:hover {
@@ -74,7 +74,15 @@
 /* Desktop */
 
 @media screen and (min-width: 1024px) {
+
   #tweet {
     width: 70%;
+  }
+  
+  .container {
+    width: 60%;
+    margin-top: 120px;
+    align-items: flex-end;
+    margin-right: 2em;
   }
 }

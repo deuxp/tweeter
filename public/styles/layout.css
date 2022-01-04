@@ -15,15 +15,13 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 
 main {
@@ -34,3 +32,18 @@ main {
   margin: auto;
 }
  
+/* desktop */
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+
+  }
+  
+}
+
+@media only screen and (max-width: 400px) {
+  nav, header, .container {
+    max-width: 400px;
+  }
+}

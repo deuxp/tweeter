@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -38,6 +39,8 @@
   </head>
 
   <body>
+
+    
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="tweeter-logo">tweeter</span>
@@ -48,19 +51,21 @@
     </nav>
 
 
+
     <header>
       <div class="headshot">
           <img src="/images/profile-hex.png"> 
       </div>
       <div class="profile-name">
-          <h2>Gottfried Kleinberger</h2>
+          <h2> <strong>Gottfried</strong> Kleinberger</h2>
       </div>
     </header>
+
+
+
     <!-- Page-specific (main) content here -->
     <main class="container">
 
-
-      <!-- line 64 -> 81  -->
       <section class="new-tweet hidden">
         <h2>Compose Tweet</h2>
         <form>
@@ -79,7 +84,6 @@
         </form>
       </section>
 
-      
     </main>
   </body>
 </html>

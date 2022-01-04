@@ -146,6 +146,8 @@ $(document).ready(() => {
         
         // reset counter
         $('.submission-area .counter').html('140')
+        $('#tweet-text').focus()
+
 
       })
     }
