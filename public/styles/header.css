@@ -8,24 +8,22 @@ body > header {
   flex-direction: column;
   height: 400px;
   width: 100%;
-  background: rgb(219, 179, 127);
+  background: rgb(247 174 80);
   background-image: url('../images/textures/arabesque.png');
-  margin-top: 120px;
   padding: 50px;
 }
 
 .headshot {
   display: flex;
   justify-content: center;
-  /* border: rgb(248, 76, 114) solid; */
   margin: auto;
   width: auto;
+  height: auto;
 }
 
 div.profile-name {
   display: flex;
   justify-content: center;
-  /* border: rgb(248, 76, 114) solid; */
   margin: auto;
   width: auto;
 }
@@ -33,6 +31,19 @@ div.profile-name > h2 {
   margin-top: 0;
 }
 
-.profile-name:hover {
-  color: aqua;
+
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  body > header {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .headshot > img{
+    margin-top: 35px;
+    transform: scale(0.8);
+    transition: 0.3s;
+  }
 }
