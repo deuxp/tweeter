@@ -11,3 +11,7 @@
 - [] have a hard 400px min size on all elements
 
 - [] migrate css to scss
+
+- [] code review
+
+  - [] ask about best way to resize an image
