@@ -155,20 +155,41 @@ $(document).ready(() => {
   loadTweets();
 
 
+  /**
+   * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+   * Purpose: turn any element into a toggle button for the Create New Tweet form
+   * @param {string} element any element that you want to be the toggle button
+   * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+   */
+  const newTweetToggle = element => {
+    const $ntwt = $('section.new-tweet');
+    const $elem = $(element); 
+    $elem.on('click', () => {
+      $elem.toggleClass('animate toggleColor')
+        $ntwt.slideToggle('fast')
+          $ntwt.toggleClass('hidden')
+            $('#tweet-text').focus()
+    })
+  }
+  
+
   ///////////////////////////////////
   // toggle new tweet from nav bar //
   ///////////////////////////////////
 
-  const $ntwt = $('section.new-tweet');
-  const $i = $('i'); 
-  $i.on('click', () => {
-    $i.toggleClass('animate toggleColor')
-      $ntwt.slideToggle('fast')
-        $ntwt.toggleClass('hidden')
-          $('#tweet-text').focus()
+  // 'i' is the tag for the floating chevron
+  newTweetToggle('i')
 
+
+  /////////////////////////////////////
+  // reveal second button: new-tweet //
+  /////////////////////////////////////
+
+  const $st = $('.second-toggle')
+  $(document).on('scroll', () => {
+    $st.removeClass('hidden')
   })
-
+  
 
   ////////////////////
   // animate button //

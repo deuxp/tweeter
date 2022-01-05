@@ -9,6 +9,7 @@
 <!-- - [x] refocus cursor in the text box after a tweet entry -->
 
 - [] separate functions into another file
+  - require inside the doc.ready
 
 - [] have a hard 400px min size on all elements
 
@@ -22,9 +23,12 @@
 
 ### feature/extra-button
 
-- [] unfix the nav
+- [] create the button
 
-- [] button is hidden
+- [x] #newtweet listener listens for both buttons
+  - or second button targets the same thing
+
+- [] unfix the nav
 
 - [] when the nav is scrolled out of view -> button appears
 

@@ -7,8 +7,8 @@ nav {
   padding-right: 1.5em;
   padding-left: 1.5em;
   justify-content: space-between;
+  height: 0;
   width: 100%;
-  position: fixed;
   margin-top: 0px;
   z-index: 1;
 }
@@ -31,10 +31,6 @@ div.new-tweet {
   width: auto;
 }
 
-/* .write {
-  z-index: 5;
-} */
-
 .fa-angle-double-down {
   margin-bottom: 10px;
   color: red;
@@ -54,28 +50,52 @@ div.new-tweet {
   transition: 0.3s;
 }
 
+
+
+.second-toggle {
+  position: fixed;
+  top: 90vh;
+  left: 90vw;
+  background: red;
+  color: #FFFF;
+
+
+  padding: 9px 14px;
+  border-radius: 20;
+  border-radius: 35px;
+}
+.second-toggle:hover {
+  transform: scale(1.5);
+  color: #FFFF;
+  background: #4056A1;
+  transition: 0.3s;
+}
+
+
 .toggleColor {
   color: slategray;
+  background: transparent;
 }
 
 /* Desktop */
 
 @media only screen and (min-width: 1024px) {
   nav {
-    /* transition: 0.5s; */
     align-items: flex-end;
     height: 120px;
     background: #4056A1;
+    position: fixed;  
 
+  }
+  .second-toggle {
+    display: none;
   }
 }
+
+/* remove logo  */
 @media only screen and (max-width: 650px) {
   span.tweeter-logo {
-    /* display: none; */
     transition: 0.1s;
-
     font-size: 0rem;
-
   }
-
 }

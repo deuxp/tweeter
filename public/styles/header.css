@@ -48,11 +48,3 @@ strong {
     width: 40%;
   }
 }
-
-/* @media screen and (max-width: 650px) {
-  .headshot > img{
-    margin-top: 35px;
-    transform: scale(0.8);
-    transition: 0.3s;
-  } */
-}
