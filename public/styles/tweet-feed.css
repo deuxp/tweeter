@@ -73,7 +73,7 @@
 
 /* Desktop */
 
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
   #tweet {
     width: 70%;
@@ -86,3 +86,9 @@
     margin-right: 2em;
   }
 }
+/* 
+@media only screen and (min-width: 1450px) {
+  nav, header, .container {
+    width: 1450px;
+  }
+} */

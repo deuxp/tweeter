@@ -1,12 +1,8 @@
-/* =-/=/-=-/=/-=-/=-/=/-=/-=-/=-/-=/=-//=-=-/*/
-/* =-/=/-= HEADER =/-=/-=-/=-/-=/=-//=-=-=-//*/
-/* border: rgb(15, 224, 119) solid; =/-=/-//=*/
-/* =-/=/-=-/=/-=-/=-/=/-=/-=-/=-/-=/=-//=-=-/*/
 
 body > header {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 350px;
   width: 100%;
   background: rgb(247 174 80);
   background-image: url('../images/textures/arabesque.png');
@@ -19,6 +15,10 @@ body > header {
   margin: auto;
   width: auto;
   height: auto;
+}
+
+.headshot img {
+  width: 200px;
 }
 
 div.profile-name {
@@ -42,16 +42,17 @@ strong {
 @media only screen and (min-width: 1024px) {
   body > header {
     position: fixed;
+    border-radius: 10px;
     margin-top: 150px;
     margin-left: 2em;
     width: 40%;
   }
 }
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   .headshot > img{
     margin-top: 35px;
     transform: scale(0.8);
     transition: 0.3s;
-  }
+  } */
 }

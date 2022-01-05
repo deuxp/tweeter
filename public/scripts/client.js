@@ -99,18 +99,12 @@ $(document).ready(() => {
       // prevent duplicates
       $(`#${id}`).remove();
 
-      const $msg = $(`<div id="${id}">⚠️ - - ${msg} - - ⚠️</div>`)
       // create DOM element
+      const $msg = $(`<div id="${id}">⚠️ - - ${msg} - - ⚠️</div>`)
       $msg.insertAfter(`${sibling}`)
   
       // animate pop-up
       $(`#${id}`).hide().slideDown({duration: 'fast'})
-  
-      // hide box pop-up upon form submission 
-      $('.new-tweet form').submit(function(e) {
-        e.preventDefault();
-
-      })
     };
   
 

@@ -42,8 +42,10 @@ main {
   
 }
 
-@media only screen and (max-width: 400px) {
+
+
+/* @media only screen and (max-width: 400px) {
   nav, header, .container {
-    max-width: 400px;
-  }
-}
+    width: 10px;
+  } */
+/* } */
