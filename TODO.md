@@ -17,3 +17,17 @@
 - [] code review
 
   - [] ask about best way to resize an image
+
+---
+
+### feature/extra-button
+
+- [] unfix the nav
+
+- [] button is hidden
+
+- [] when the nav is scrolled out of view -> button appears
+
+- [] button activates tweet form
+
+- [] the button disappears when the nav is back OR when the screen is large fixed nav
