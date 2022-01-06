@@ -24,25 +24,25 @@ $(document).ready(() => {
   const $ntwt = $('section.new-tweet');
   const $elem = $('i'); 
   $elem.on('click', () => {
-  $elem.toggleClass('animate toggleColor')
-  $ntwt.slideToggle('fast')
-  $ntwt.toggleClass('hidden')
-  $('#tweet-text').focus()
+    $elem.toggleClass('animate toggleColor')
+    $ntwt.slideToggle('fast')
+    $ntwt.toggleClass('hidden')
+    $('#tweet-text').focus()
   })
-
+  
   
   /////////////////////////////////////
   // reveal second button: new-tweet //
   /////////////////////////////////////
-
+  
   const $st = $('.second-toggle')
-
+  
   $(document).on('scroll', () => {
-    $st.fadeIn('fast')
+    $st.removeClass('hidden').off(':hover')
   })
-
+  
   $('#tweet-text').on('focus', () => {
-    $st.fadeOut('fast')
+  $st.addClass('hidden').on(':hover')
   })
 
 

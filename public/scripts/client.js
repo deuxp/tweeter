@@ -112,6 +112,7 @@ $(document).ready(() => {
 
   $('.new-tweet form').submit(function(e) {
     e.preventDefault();
+    
     const text = $(this['0']).val();
     const $text = $(this['0']).serialize();
     const errMsg1 = 'You need to enter some text'

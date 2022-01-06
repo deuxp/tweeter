@@ -64,10 +64,11 @@ div.new-tweet {
 }
 .second-toggle:hover {
   transform: scale(1.3);
-  color: #ee542c;
-  background: #4056A1;
+  color: #FFFF;
+  background: #f19a68;
   transition: 0.2s;
 }
+
 
 
 .toggleColor {
@@ -95,5 +96,9 @@ div.new-tweet {
   span.tweeter-logo {
     transition: 0.1s;
     font-size: 0rem;
+  }
+
+  .second-toggle {
+    display: none;
   }
 }

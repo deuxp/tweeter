@@ -1,8 +1,10 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. 140 characters is all you need. Participate now!
 
-- HTML, CSS, JS, jQuery and AJAX front-end skills, and Node Express back-end skills.
+## Skills Practiced
+
+- HTML, CSS, JS, jQuery and AJAX front-end, and Node Express back-end.
 
 ## Getting Started
 
@@ -18,4 +20,3 @@ Tweeter is a simple, single-page Twitter clone.
 - Node 5.10.x or above
 - body-paser 1.15.2 or above
 - chance 1.0.2 or above
-- md5 2.1.0 or above
