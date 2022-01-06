@@ -6,6 +6,8 @@ Tweeter is a simple, single-page Twitter clone. 140 characters is all you need. 
 
 - HTML, CSS, JS, jQuery and AJAX front-end, and Node Express back-end.
 
+![use case example](https://github.com/deuxp/tweeter/blob/master/public/images/GIF/newTweet.gif)
+
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
