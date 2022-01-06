@@ -1,46 +1,41 @@
-
-body > header {
+body header {
   display: flex;
   flex-direction: column;
   height: 350px;
   width: 100%;
-  background: rgb(247 174 80);
-  background-image: url('../images/textures/arabesque.png');
+  background: #f7ae50;
+  background-image: url("../images/textures/arabesque.png");
   padding: auto;
 }
-
-.headshot {
+body header .headshot {
   display: flex;
   justify-content: center;
   margin: auto;
   width: auto;
   height: auto;
 }
-
-.headshot img {
+body header .headshot img {
   width: 200px;
 }
-
-div.profile-name {
+body header .profile-name {
   display: flex;
   color: #FFFF;
   justify-content: center;
   margin: auto;
   width: auto;
 }
-
-div.profile-name > h2 {
+body header .profile-name h2 {
   margin-top: 0;
 }
-strong {
-  color: rgb(251, 255, 235);
+body header .profile-name h2 strong {
+  color: #fbffeb;
 }
 
-
-/* Desktop */
-
+/* Desktop View
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+*/
 @media only screen and (min-width: 1024px) {
-  body > header {
+  body header {
     position: fixed;
     border-radius: 10px;
     margin-top: 150px;
@@ -48,3 +43,5 @@ strong {
     width: 40%;
   }
 }
+
+/*# sourceMappingURL=header.css.map */

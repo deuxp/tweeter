@@ -1,0 +1,57 @@
+
+body {
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 100%;
+    background: rgb(247 174 80);
+    background-image: url('../images/textures/arabesque.png');
+    padding: auto;
+
+    .headshot {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      width: auto;
+      height: auto;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    .profile-name {
+      display: flex;
+      color: #FFFF;
+      justify-content: center;
+      margin: auto;
+      width: auto;
+
+      h2 {
+        margin-top: 0;
+
+        strong {
+          color: rgb(251, 255, 235);
+        }
+      }
+    }
+  } 
+}
+
+
+/* Desktop View
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+*/
+
+@media only screen and (min-width: 1024px) {
+  body {
+    header {
+    position: fixed;
+    border-radius: 10px;
+    margin-top: 150px;
+    margin-left: 2em;
+    width: 40%;
+    }
+  }
+}

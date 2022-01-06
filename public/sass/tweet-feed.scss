@@ -1,0 +1,82 @@
+#tweet {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  padding: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  width: 85%;
+  :hover {
+    box-shadow: 0px 5px 8px 0px rgb(50 50 50 / 75%);
+    background: rgb(235, 240, 244)
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7em;
+
+    .profile {
+      display: flex;
+      width: auto;
+      justify-content: space-between;
+      align-items: center;
+      
+      .icon {
+        height: auto;
+        max-width: 45px;
+      }
+      .user {
+        color: #797979;
+        margin-left: 5px;
+      }
+    }
+
+    .handle{
+      color: #a7a7a7;
+      display: flex;
+      align-items: center;
+    }
+
+  }
+  div.message {
+    padding: 1em;
+    border-bottom: solid 2px;
+    padding-top: 1.5em;
+    font-size: .7em;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.5em;
+    padding: 0.5em;
+
+    .likes {
+      display: flex;
+      justify-content: space-around;
+      width: 5em;
+      .flag:hover, .retweet:hover, .like:hover {
+        color: goldenrod;
+      }
+    }
+  }
+}
+
+
+/* Desktop View
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
+*/
+
+@media only screen and (min-width: 1024px) {
+
+  #tweet {
+    width: 70%;
+  }
+  
+  // fudge it to the right-side, scrollable content
+  .container {
+    width: 60%;
+    margin-top: 120px;
+    align-items: flex-end;
+    margin-right: 2em;
+  }
+}

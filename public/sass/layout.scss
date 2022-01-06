@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,29 +13,32 @@ html {
 /* Global layout stuff
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
  */
+
 body {
   display: flex;
   flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
-}
-body main {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  align-items: center;
-  margin: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+  }
 }
 
+
+ 
 /* Desktop View
 --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 */
+
 @media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;
   }
 }
-
-/*# sourceMappingURL=layout.css.map */
