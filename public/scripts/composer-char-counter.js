@@ -1,5 +1,7 @@
 
 $(document).ready(() => {
+
+  // Form character counter
   $('#tweet-text').on('input', function() {
     const $count = $(this).val().length; // <-- `this` is the element where the event is occuring
     const $counter = $(this).parents('form').children('.submission-area').children('.counter');
@@ -34,14 +36,19 @@ $(document).ready(() => {
   /////////////////////////////////////
 
   const $st = $('.second-toggle')
-  $(document).on('scroll', () => {
-    $st.removeClass('hidden')
-  })
-  
 
-  ////////////////////
-  // animate button //
-  ////////////////////
+  $(document).on('scroll', () => {
+    $st.fadeIn('fast')
+  })
+
+  $('#tweet-text').on('focus', () => {
+    $st.fadeOut('fast')
+  })
+
+
+  ////////////////////////
+  // animate nav button //
+  ////////////////////////
 
   const $navTweet = $('.animate');
 

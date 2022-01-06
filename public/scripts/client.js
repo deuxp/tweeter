@@ -5,51 +5,51 @@
  */
 
 $(document).ready(() => {
-    /**
+  /**
    * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
    * @param {JSON} tweet -> the tweets JSON object database
    * @returns the DOM object representation of one tweet
    * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
    */
-     const createTweetElement = (tweet) => {
-      const { user, content, created_at } = tweet;
-      const { name, avatars, handle } = user;
-      const { text } = content;
-      const timeStamp = timeago.format(created_at)
-  
-      // XSS prevention
-      const $safeText = $('<div>').text(text).html()
-      
-      const $article = $(`
-        <article id="tweet">
-          <header>
-  
-            <div class="profile">
-              <img class="icon" src="${avatars}" alt="avatar">
-              <div class="user">${name}</div>
-            </div>
-  
-            <div class="handle">${handle}</div>
-          </header>
+    const createTweetElement = (tweet) => {
+    const { user, content, created_at } = tweet;
+    const { name, avatars, handle } = user;
+    const { text } = content;
+    const timeStamp = timeago.format(created_at)
+
+    // XSS prevention
+    const $safeText = $('<div>').text(text).html()
+    
+    const $article = $(`
+      <article id="tweet">
+        <header>
+
+          <div class="profile">
+            <img class="icon" src="${avatars}" alt="avatar">
+            <div class="user">${name}</div>
+          </div>
+
+          <div class="handle">${handle}</div>
+        </header>
+        
+        <div class="message">${$safeText}</div>
+
+        <footer>
+
+          <div class="time">${timeStamp}</div>
+
+          <div class="likes">
+            <div class="flag"><i class="fas fa-flag"></i></div>
+            <div class="retweet"><i class="fas fa-retweet"></i></div>
+            <div class="like"><i class="fas fa-heart"></i></div>
+          </div>
           
-          <div class="message">${$safeText}</div>
-  
-          <footer>
-  
-            <div class="time">${timeStamp}</div>
-  
-            <div class="likes">
-              <div class="flag"><i class="fas fa-flag"></i></div>
-              <div class="retweet"><i class="fas fa-retweet"></i></div>
-              <div class="like"><i class="fas fa-heart"></i></div>
-            </div>
-            
-          </footer>
-          
-        </article>
-      `)
-      return $article;
-    };
+        </footer>
+        
+      </article>
+    `)
+    return $article;
+  };
     
   
     /**
@@ -86,24 +86,24 @@ $(document).ready(() => {
     };
   
   
-    /** Helper Function: Appends error pop-up window and presents it
-     * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
-     * @param {string} msg -> display error message
-     * @param {string} id -> id="" element id
-     * @param {string} sibling -> insert created DOM element after this sibling
-     * Behaviour: The purpose of this function is to construct the 
-     * DOM element for the Error pop-up window. And insert itself after a specified sibling
-     * ----- ----- ----- ----- ----- ----- ----- ----- ---------- ----- ----- 
-     */
-    const errorBubble = (msg, id, sibling) => {
-      // prevent duplicates
-      $(`#${id}`).remove();
-      // create DOM element
-      const $msg = $(`<div id="${id}">⚠️ - - ${msg} - - ⚠️</div>`)
-      $msg.insertAfter(`${sibling}`)
-      // animate pop-up
-      $(`#${id}`).hide().slideDown({duration: 'fast'})
-    };
+  /** Helper Function: Appends error pop-up window and presents it
+   * ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+   * @param {string} msg -> display error message
+   * @param {string} id -> id="" element id
+   * @param {string} sibling -> insert created DOM element after this sibling
+   * Behaviour: The purpose of this function is to construct the 
+   * DOM element for the Error pop-up window. And insert itself after a specified sibling
+   * ----- ----- ----- ----- ----- ----- ----- ----- ---------- ----- ----- 
+   */
+  const errorBubble = (msg, id, sibling) => {
+    // prevent duplicates
+    $(`#${id}`).remove();
+    // create DOM element
+    const $msg = $(`<div id="${id}">⚠️ - - ${msg} - - ⚠️</div>`)
+    $msg.insertAfter(`${sibling}`)
+    // animate pop-up
+    $(`#${id}`).hide().slideDown({duration: 'fast'})
+  };
   
 
   ////////////////////////////////////
