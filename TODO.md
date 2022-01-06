@@ -4,6 +4,9 @@
 
 <!-- - [x] add responsive layout properties to the desktop layout, more specifically the layout shifter style -->
 
+- [] readme
+  - photos
+
 - [] check max widths for really large screens
 
 <!-- - [x] refocus cursor in the text box after a tweet entry -->
@@ -15,23 +18,33 @@
 
 - [] migrate css to scss
 
-- [] code review
+---
 
-  - [] ask about best way to resize an image
+### code review
+
+- [] what is the best way to call `this` object.. It appears that i am always having to dig it out -> `this[0]`
+
+- [] ask about best way to resize an image
 
 ---
 
-### feature/extra-button
+### refactor/scss
 
-- [] create the button
+- [] fisrt change the files over
+
+---
+
+<!-- ### feature/extra-button
+
+- [x] create the button
 
 - [x] #newtweet listener listens for both buttons
   - or second button targets the same thing
 
-- [] unfix the nav
+- [x] unfix the nav
 
-- [] when the nav is scrolled out of view -> button appears
+- [x] when the nav is scrolled out of view -> button appears
 
-- [] button activates tweet form
+- [x] button activates tweet form
 
-- [] the button disappears when the nav is back OR when the screen is large fixed nav
+- [x] the button disappears when the nav is back OR when the screen is large fixed nav -->
