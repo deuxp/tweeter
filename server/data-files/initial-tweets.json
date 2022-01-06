@@ -8,11 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-<<<<<<< HEAD
-    "created_at": 1641333618404
-=======
-    "created_at": 1641330388611
->>>>>>> refactor/scss
+    "created_at": 1641334991971
   },
   {
     "user": {
@@ -23,10 +19,6 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-<<<<<<< HEAD
-    "created_at": 1641420018404
-=======
-    "created_at": 1641416788611
->>>>>>> refactor/scss
+    "created_at": 1641421391971
   }
 ]
