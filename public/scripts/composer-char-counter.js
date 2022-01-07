@@ -38,11 +38,11 @@ $(document).ready(() => {
   const $st = $('.second-toggle')
   
   $(document).on('scroll', () => {
-    $st.removeClass('hidden').off(':hover')
+    $st.removeClass('hidden')
   })
   
   $('#tweet-text').on('focus', () => {
-  $st.addClass('hidden').on(':hover')
+    $st.addClass('hidden')
   })
 
 
