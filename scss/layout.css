@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,14 +13,16 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   display: flex;
   flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
+
 
 main {
   display: flex;
@@ -30,17 +31,21 @@ main {
   align-items: center;
   margin: auto;
 }
-
+ 
 /* desktop */
+
 @media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;
+
   }
+  
 }
+
+
+
 /* @media only screen and (max-width: 400px) {
   nav, header, .container {
     width: 10px;
   } */
 /* } */
-
-/*# sourceMappingURL=layout.css.map */

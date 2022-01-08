@@ -1,3 +1,4 @@
+
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -24,6 +25,7 @@
   border-bottom: solid 2px black;
   font-size: 0.8em;
   padding-bottom: 7px;
+
 }
 
 #tweet-text {
@@ -42,7 +44,9 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 0.3em;
+
 }
+
 
 .submission-area > button {
   background: #4056A1;
@@ -59,16 +63,14 @@
   color: #4056A1;
 }
 
+
 #error-msg {
   display: flex;
   font-size: 0.8em;
   justify-content: center;
-  height: auto;
-  width: 100%;
-  padding: 3%;
+  height: auto; width: 100%; padding: 3%;
   margin-bottom: 1em;
-  border: solid red;
-  border-radius: 5px;
+  border: solid red; border-radius: 5px;
   background-color: rgb(201, 255, 213);
   color: red;
 }
@@ -76,5 +78,3 @@
 .hidden {
   display: none;
 }
-
-/*# sourceMappingURL=new-tweet.css.map */

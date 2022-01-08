@@ -1,10 +1,11 @@
+
 body > header {
   display: flex;
   flex-direction: column;
   height: 350px;
   width: 100%;
   background: rgb(247 174 80);
-  background-image: url("../images/textures/arabesque.png");
+  background-image: url('../images/textures/arabesque.png');
   padding: auto;
 }
 
@@ -31,12 +32,13 @@ div.profile-name {
 div.profile-name > h2 {
   margin-top: 0;
 }
-
 strong {
   color: rgb(251, 255, 235);
 }
 
+
 /* Desktop */
+
 @media only screen and (min-width: 1024px) {
   body > header {
     position: fixed;
@@ -46,5 +48,3 @@ strong {
     width: 40%;
   }
 }
-
-/*# sourceMappingURL=header.css.map */
